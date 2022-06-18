@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 public class PosterItem {
     private int id;
+    private int posterId;
     private String name;
 
     }

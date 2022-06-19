@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class PosterManagerTest {
 
-
     private PosterItem first = new PosterItem(1, 1, "Bladshot");
     private PosterItem second = new PosterItem(2, 2, "Ahead");
     private PosterItem third = new PosterItem(3, 3, "HotelBelgrad");
@@ -23,15 +22,12 @@ public class PosterManagerTest {
     private PosterItem ninth = new PosterItem(9, 9, "NumberThree");
     private PosterItem tenth = new PosterItem(10, 10, "NumberFour");
 
-
     @Test
     void mustShowLessLimit() {
         PosterManager manager = new PosterManager(4);
         manager.add(first);
         manager.add(second);
         manager.add(third);
-//        manager.add(fourth);
-//        manager.add(fifth);
 
         manager.getLastAdd();
 
@@ -71,7 +67,7 @@ public class PosterManagerTest {
         manager.add(fifth);
         manager.add(sixth);
 
-         manager.getLastAdd();
+        manager.getLastAdd();
 
         PosterItem[] actual = manager.getLastAdd();
         PosterItem[] expected = {

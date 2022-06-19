@@ -13,4 +13,4 @@ public class PosterItem {
     private int posterId;
     private String name;
 
-    }
+}

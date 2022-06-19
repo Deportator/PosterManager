@@ -17,14 +17,14 @@ public class PosterManager {
 
     public PosterManager() {
         amountPoster = 10;
-        }
+    }
 
     public void add(PosterItem item) {
         int lenght = items.length + 1;
         PosterItem[] tmp = new PosterItem[lenght];
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
-            }
+        }
 //        arraycopy(items, 0, tmp, 0, items.length);
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = item;
@@ -35,20 +35,19 @@ public class PosterManager {
         return items;
     }
 
-
-        public PosterItem[] getLastAdd() {
-            int resultLanght;
-            if (this.amountPoster < findAll().length) {
-                resultLanght = amountPoster;
-            } else {
-                resultLanght = findAll().length;
-            }
-            PosterItem[] result = new PosterItem[resultLanght];
-
-            for (int i = 0; i < result.length; i++) {
-                int index = items.length - i - 1;
-                result[i] = items[index];
-            }
-            return result;
+    public PosterItem[] getLastAdd() {
+        int resultLanght;
+        if (this.amountPoster < findAll().length) {
+            resultLanght = amountPoster;
+        } else {
+            resultLanght = findAll().length;
         }
+        PosterItem[] result = new PosterItem[resultLanght];
+
+        for (int i = 0; i < result.length; i++) {
+            int index = items.length - i - 1;
+            result[i] = items[index];
+        }
+        return result;
     }
+}
